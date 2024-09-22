@@ -361,7 +361,7 @@
 
   /* Sidebar */
   .sidebar {
-    @apply sticky left-0 top-0 flex h-screen w-fit flex-col  justify-between border-r border-gray-200 bg-white pt-8 text-white max-md:hidden sm:p-4 xl:p-6 2xl:w-[355px];
+    @apply sticky left-0 top-0 flex h-full w-fit flex-col justify-between border-r border-gray-200 bg-white pt-8 text-white max-md:hidden sm:p-4 xl:p-6 2xl:w-[355px];
   }
 
   .sidebar-logo {
@@ -374,5 +374,20 @@
 
   .sidebar-label {
     @apply text-16 font-semibold text-black-2 max-xl:hidden;
+  }
+
+  /* Full-screen adjustments */
+  @media (max-width: 768px) {
+    /* Adjust breakpoint as needed */
+    .sidebar {
+      display: block; /* Show sidebar on smaller screens */
+      width: 100%; /* Take up full width */
+      border-right: none; /* Remove border on smaller screens */
+      padding: 1rem; /* Adjust padding as needed */
+    }
+
+    .sidebar-logo {
+      display: block; /* Show logo on smaller screens */
+    }
   }
 }
